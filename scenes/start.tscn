@@ -1,5 +1,13 @@
-[gd_scene format=3 uid="uid://dxf826ua6n3tj"]
+[gd_scene load_steps=2 format=3 uid="uid://dxf826ua6n3tj"]
+
+[ext_resource type="Texture2D" uid="uid://dqdp16thxe5a0" path="res://textures/bonfire_temp.png" id="1_jaeev"]
 
 [node name="start" type="Node"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="."]
+
+[node name="bonfire" type="Sprite2D" parent="."]
+position = Vector2(392, 197)
+texture = ExtResource("1_jaeev")
+
+[node name="bird" type="Sprite2D" parent="."]
