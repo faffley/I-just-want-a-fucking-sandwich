@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bx8c53cngsqar"]
+
+[ext_resource type="Texture2D" uid="uid://dyy3ldrb005w6" path="res://resources/textures/steel_knife.png" id="1_vc54m"]
+[ext_resource type="Script" uid="uid://f2eo28d2btne" path="res://scripts/item.gd" id="2_islsh"]
+
+[resource]
+script = ExtResource("2_islsh")
+icon = ExtResource("1_vc54m")
+is_knife = true
+metadata/_custom_type_script = "uid://f2eo28d2btne"

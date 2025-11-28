@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqdp16thxe5a0"
-path="res://.godot/imported/bonfire_temp.png-9e4ed71cedd9563fece1ccb6fb6b8d03.ctex"
+uid="uid://dgtmn8vg0rfvg"
+path="res://.godot/imported/knife.png-3e6ac289eb3f066482c639861fd6ac9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/bonfire_temp.png"
-dest_files=["res://.godot/imported/bonfire_temp.png-9e4ed71cedd9563fece1ccb6fb6b8d03.ctex"]
+source_file="res://resources/textures/knife.png"
+dest_files=["res://.godot/imported/knife.png-3e6ac289eb3f066482c639861fd6ac9b.ctex"]
 
 [params]
 

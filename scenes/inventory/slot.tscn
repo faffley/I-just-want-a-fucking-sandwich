@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0hsaooh38mtv"]
+
+[ext_resource type="Script" uid="uid://1hhiw6elpsr6" path="res://slot.gd" id="1_x1gds"]
+[ext_resource type="Texture2D" uid="uid://cy6chb1s7xix0" path="res://resources/textures/slot.png" id="2_0xnbr"]
+
+[node name="Slot" type="CenterContainer"]
+script = ExtResource("1_x1gds")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = ExtResource("2_0xnbr")
+expand_mode = 4
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_button_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_button_mouse_exited"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://y207o5f6d5qw"]
 
 [ext_resource type="Script" uid="uid://dt5l2x522x0ux" path="res://scripts/item_manager.gd" id="1_pq8q7"]
-[ext_resource type="Script" uid="uid://1hhiw6elpsr6" path="res://slot.gd" id="2_pyidc"]
+[ext_resource type="PackedScene" uid="uid://d0hsaooh38mtv" path="res://scenes/inventory/slot.tscn" id="2_jnlp7"]
 
 [node name="Root" type="Node"]
 
@@ -9,8 +9,8 @@
 script = ExtResource("1_pq8q7")
 
 [node name="ColorRect" type="ColorRect" parent="ItemManager"]
-offset_right = 394.0
-offset_bottom = 40.0
+offset_right = 404.0
+offset_bottom = 53.0
 
 [node name="Inventory" type="HBoxContainer" parent="ItemManager/ColorRect"]
 layout_mode = 1
@@ -20,76 +20,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Slot" type="CenterContainer" parent="ItemManager/ColorRect/Inventory"]
-layout_mode = 2
-script = ExtResource("2_pyidc")
-
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Slot"]
+[node name="Slot" parent="ItemManager/ColorRect/Inventory" instance=ExtResource("2_jnlp7")]
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="ItemManager/ColorRect/Inventory"]
-visible = false
+[node name="Slot2" parent="ItemManager/ColorRect/Inventory" instance=ExtResource("2_jnlp7")]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Button2"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button3" type="Button" parent="ItemManager/ColorRect/Inventory"]
-visible = false
+[node name="Slot3" parent="ItemManager/ColorRect/Inventory" instance=ExtResource("2_jnlp7")]
 layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Button3"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button4" type="Button" parent="ItemManager/ColorRect/Inventory"]
-visible = false
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Button4"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button5" type="Button" parent="ItemManager/ColorRect/Inventory"]
-visible = false
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Button5"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button6" type="Button" parent="ItemManager/ColorRect/Inventory"]
-visible = false
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Button6"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button7" type="Button" parent="ItemManager/ColorRect/Inventory"]
-visible = false
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Button7"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Button8" type="Button" parent="ItemManager/ColorRect/Inventory"]
-visible = false
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="ItemManager/ColorRect/Inventory/Button8"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[connection signal="gui_input" from="ItemManager/ColorRect/Inventory" to="ItemManager/ColorRect/Inventory/Slot" method="_on_texture_button_gui_input"]
-[connection signal="mouse_entered" from="ItemManager/ColorRect/Inventory/Slot/TextureRect" to="ItemManager/ColorRect/Inventory/Slot" method="_on_texture_button_mouse_entered"]
-[connection signal="mouse_exited" from="ItemManager/ColorRect/Inventory/Slot/TextureRect" to="ItemManager/ColorRect/Inventory/Slot" method="_on_texture_button_mouse_exited"]
