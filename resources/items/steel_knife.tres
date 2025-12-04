@@ -5,6 +5,8 @@
 
 [resource]
 script = ExtResource("2_islsh")
+item_name = "steel knife"
 icon = ExtResource("1_vc54m")
+description = "Knife made of steel."
 is_knife = true
 metadata/_custom_type_script = "uid://f2eo28d2btne"

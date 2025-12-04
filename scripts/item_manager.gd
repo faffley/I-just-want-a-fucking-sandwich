@@ -3,8 +3,8 @@ extends Node
 var item_list: Array[Item]
 
 @onready var item_menu = get_node("ColorRect/Inventory")
+@onready var selected_item = get_node("SelectedItem")
 
-var current_item: Item = null
 var slots: Array[InventorySlot] = []
 
 # Called when the node enters the scene tree for the first time.
@@ -21,8 +21,9 @@ func _ready() -> void:
 	slots[0].change_item(steel_knife)
 	
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
+
+func get_current_item() -> Item:
+	return selected_item.curr_item

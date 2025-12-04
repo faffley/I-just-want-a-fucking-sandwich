@@ -13,7 +13,6 @@ func _ready() -> void:
 	add_to_group("inventory_slots")
 	
 
-
 # When slot is pressed
 func _on_texture_button_gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
@@ -23,9 +22,11 @@ func _on_texture_button_gui_input(event):
 			)
 
 func _on_texture_button_mouse_entered():
+	#This should probably display the item text too
 	slot_hovered.emit(self, true)
 
 func _on_texture_button_mouse_exited():
+	#This should get rid of display item text
 	slot_hovered.emit(self, false)
 	
 func change_item(new_item: Item)->Item:
